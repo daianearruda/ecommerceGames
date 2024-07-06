@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useGetSoonQuery, useGetOnSaleQuery } from '../../services/api'
 
 import Banner from '../../components/Banner'
 import ProductList from '../../components/ProductList'
-
-import { useGetSoonQuery, useGetOnSaleQuery } from '../../services/api'
 
 export interface GalleryItem {
   type: 'image' | 'video'
