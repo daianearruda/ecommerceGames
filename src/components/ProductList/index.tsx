@@ -2,7 +2,7 @@ import { Game } from '../../pages/Home'
 import { parseToBrl } from '../../utils'
 import Product from '../Product'
 
-import { Container, List } from './styles'
+import * as S from './styles'
 
 export type Props = {
   title: string
@@ -28,10 +28,10 @@ const ProductList = ({ background, title, games, id }: Props) => {
     return tags
   }
   return (
-    <Container id={id} background={background}>
+    <S.Container id={id} background={background}>
       <div className="container">
-        <h2>{title}</h2>
-        <List>
+        <S.Title>{title}</S.Title>
+        <S.List>
           {games.map((game) => (
             <li key={game.id}>
               <Product
@@ -45,9 +45,9 @@ const ProductList = ({ background, title, games, id }: Props) => {
               />
             </li>
           ))}
-        </List>
+        </S.List>
       </div>
-    </Container>
+    </S.Container>
   )
 }
 
